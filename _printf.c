@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "holberton.h"
 #include <stdarg.h>
-#include <stdlib.h>
 /**
  * _printf - similar funct to the std printf
  * @format: string to print to screen.
