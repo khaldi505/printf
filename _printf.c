@@ -14,11 +14,19 @@ put_form form[] = {
 {0, NULL}
 };
 va_list arg;
-int i = 0, j, len = 0;
+int i = 0, j, len = 0, z = 0;
 va_start(arg, format);
-while (format && format[i])
+if (format == NULL)
+return (-1);
+while (format[i])
 {
-if (format[i] == '%')
+if (format[i] == '%' && format[i + 1] == '%')
+{
+_putchar('%');
+len++;
+i++;
+}
+else if ((format[i] == '%') && (format[i + 1] != '%'))
 {
 for (j = 0; j < 3; j++)
 {
@@ -26,6 +34,21 @@ if (format[i + 1] == form[j].type)
 {
 form[j].func(arg);
 len++;
+z = 1;
+break;
+}
+}
+if (z == 0)
+{
+for (j = 0; j < 3; j++)
+{
+if (format[i + 1] != form[j].type)
+{
+_putchar(format[i]);
+_putchar(format[i + 1]);
+len++;
+break;
+}
 }
 }
 i++;
