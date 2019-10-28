@@ -14,6 +14,6 @@ void put_string(va_list arg);
 typedef struct put_form 
 {
 char type;
-void (*func)();
+void (*func)(va_list arg);
 }put_form;
 #endif

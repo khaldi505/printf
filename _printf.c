@@ -14,8 +14,8 @@ put_form form[] = {
 {0, NULL}
 };
 va_list arg;
-va_start(arg, format);
 int i = 0, j, len = 0;
+va_start(arg, format);
 while (format && format[i])
 {
 if (format[i] == '%')
