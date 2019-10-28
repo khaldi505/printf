@@ -8,12 +8,12 @@
  */
 int _printf(const char *format, ...)
 {
-va_list arg;
 put_form form[] = {
 {'c', put_char},
 {'s', put_string},
 {0, NULL}
 };
+va_list arg;
 va_start(arg, format);
 int i = 0, j, len = 0;
 while (format && format[i])
