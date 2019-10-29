@@ -20,6 +20,7 @@ put_form form[] = {
 };
 int i;
 for (i = 0; i < 6; i++)
+{
 if (i == 5)
 {
 _putchar('%');
