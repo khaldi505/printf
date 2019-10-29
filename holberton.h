@@ -6,6 +6,7 @@ int _printf(const char *format, ...);
 int put_char(va_list arg);
 int put_string(va_list arg);
 int put_hash(va_list arg);
+int put_numb(va_list args);
 /**
  * put_form: choose function to use based on the input.
  * @type: character which will indicate the type.

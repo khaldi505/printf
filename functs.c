@@ -4,7 +4,7 @@
 /**
  * put_char - printing a char.
  * @arg: next argument.
- * Description - no need to.
+ * Return: 1.
  */
 int put_char(va_list arg)
 {
@@ -14,7 +14,7 @@ return (1);
 /**
  * put_string - printing a string.
  * @arg: next argument.
- * Description - no need to.
+ * Return: length of the string?
  */
 int put_string(va_list arg)
 {
@@ -33,7 +33,7 @@ return (i - 1);
 /**
  * put_hash - treat of hash.
  * @arg: next argument.
- * Description - no need to.
+ * Return: 1.
  */
 int put_hash(va_list arg)
 {
