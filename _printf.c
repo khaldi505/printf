@@ -20,13 +20,7 @@ if (format == NULL)
 return (-1);
 while (format[i])
 {
-if (format[i] == '%' && format[i + 1] == '%')
-{
-_putchar('%');
-len++;
-i++;
-}
-else if ((format[i] == '%') && (format[i + 1] != '%'))
+if ((format[i] == '%') && (format[i + 1] != '%'))
 {
 for (j = 0; j < 3; j++)
 {
